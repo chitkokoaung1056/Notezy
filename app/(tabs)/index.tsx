@@ -42,7 +42,7 @@ const Home = () => {
   const hasNormal = displayedNotes.some((n) => !n.isPinned);
 
   return (
-    <SafeAreaView className="flex-1 px-4 bg-blue-50 relative z-0">
+    <SafeAreaView className="flex-1 px-4 bg-blue-50 dark:bg-slate-800 relative z-0">
       <SearchBar />
       <AddNoteButton />
 
@@ -56,13 +56,13 @@ const Home = () => {
           renderItem={({ item, index }) => (
             <>
               {hasPinned && index === 0 && (
-                <Text className="font-extrabold mt-2 mb-2 text-gray-700">
+                <Text className="font-extrabold mt-2 mb-2 text-gray-700 dark:text-white">
                   📌 Pinned Notes
                 </Text>
               )}
 
               {hasNormal && index === firstNormalIndex && (
-                <Text className="font-extrabold mt-6 mb-2 text-gray-700">
+                <Text className="font-extrabold mt-6 mb-2 text-gray-700 dark:text-white">
                   All Notes
                 </Text>
               )}

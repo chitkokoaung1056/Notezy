@@ -5,4 +5,5 @@ export interface NoteContextType {
   deleteNote: (id: number) => void;
   addNote: (note: NoteType) => void;
   updateNote: (id: number, note: NoteType) => void;
+  deleteAllNote: () => void;
 }
